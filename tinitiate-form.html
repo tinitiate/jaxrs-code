@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>tinitate jax rs form test</title>
+	</head>
+<body>
+	<!--  Form elements -->
+	<form action="rest/form-process/form-elements" method="post">
+	<h1>This form demonstrates multiple form elements</h1>
+    
+    <!--  JAX RS HTML Text Box -->
+    <p>Text Box</p>
+    <input type="text" name="textVal"><br>
+    
+    <!--  JAX RS HTML Radio Button -->
+    <p>Radio Button</p>
+	<input type="radio" name="country" value="USA" checked> USA <br>
+	<input type="radio" name="country" value="CHINA"> CHINA <br>
+	<input type="radio" name="country" value="INDIA"> INDIA <br>
+
+    <!--  JAX RS HTML Check Box -->
+    <p>Check Box</p>
+    <input type="checkbox" name="food" value="Pizza"> Pizza <br>
+    <input type="checkbox" name="food" value="Salad" checked> Salad<br>
+    
+    <!--  JAX RS HTML Drop down select -->
+	<select name="languages">
+	  <option value="java">java</option>
+	  <option value="python">python</option>
+	  <option value="php">php</option>
+	</select>
+    <br>
+ 
+    <!--  JAX RS HTML Multiple select -->
+	<select name="database" size="4" multiple>
+	  <option value="oracle">oracle</option>
+	  <option value="mysql">mysql</option>
+	  <option value="sqlsever">sqlsever</option>
+	  <option value="bigdata">bigdata</option>
+	</select>
+	<br>
+
+    <input type="submit" value="Submit" />
+
+	</form>
+	</body>
+</html>

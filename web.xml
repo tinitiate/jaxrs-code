@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+web.xml
+=======
+1. Servlet is a Java program that extends a web servers capability as they
+   directly talk to Java APIs, They are ideal for Java Web Development.
+2. The web.xml file is the deployment descriptor for a Servlet-based Java web 
+   application.
+3. The web.xml handles two important roles,
+  3.1 Define a name of the handler (Servlet)
+  3.2 The handler maps a Java File to a HTML file.
+4. There are more advanced features of web.xml, which have config data, accepts
+   HTML page name patterns.
+-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+         id="WebApp_ID"
+         version="3.0">
+  <display-name>Tinitiate</display-name>
+  <context-param>
+    <param-name>JSONResource</param-name>
+    <param-value>C:/Personal/tidata.json</param-value>
+  </context-param>
+  <context-param>
+    <param-name>XMLResource</param-name>
+    <param-value>C:/Personal/tidata.xml</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>Jersey RESTful Introduction</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>com.tinitiate.jersey.rs</param-value>
+    </init-param>
+	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jersey RESTful Introduction</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+</web-app>
